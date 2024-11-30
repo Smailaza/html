@@ -1,0 +1,592 @@
+/* القواعد العامة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .auth-buttons button {
+    padding: 6px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .auth-buttons .login {
+    background: none;
+    color: #333;
+  }
+  
+  .auth-buttons .signup {
+    background: #4caf50;
+    color: #fff;
+  }
+  
+  /* القسم الرئيسي */
+  .hero {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .email-form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .email-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .email-form button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .partners {
+    padding: 30px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .partner-logos img {
+    max-width: 120px;
+    margin: 0 10px;
+  }
+  
+  /* التصميم المتجاوب */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .email-form {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .hero-image {
+      margin-top: 20px;
+    }
+  
+    .hero-image img {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-text h1 {
+      font-size: 1.8rem;
+    }
+  
+    .email-form input,
+    .email-form button {
+      font-size: 0.9rem;
+    }
+  
+    .partner-logos img {
+      max-width: 80px;
+    }
+  }
+  /* قواعد عامة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    max-width: 60px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .auth-buttons button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .auth-buttons .login {
+    background: none;
+    color: #333;
+  }
+  
+  .auth-buttons .signup {
+    background: #4caf50;
+    color: #fff;
+  }
+  
+  /* تصميم زر القائمة (Hamburger) */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* تصميم متجاوب */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      background: #fff;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 20px;
+      border: 1px solid #eaeaea;
+      border-radius: 5px;
+      display: none; /* يبدأ بإخفاء القائمة */
+    }
+  
+    .nav-links.active {
+      display: flex; /* تظهر القائمة عند تفعيلها */
+    }
+  
+    .auth-buttons {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .hamburger {
+      display: block; /* إظهار زر القائمة على الشاشات الصغيرة */
+    }
+  }
+  /* إعداد الشبكة */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* يجعل الأعمدة تتأقلم مع حجم الشاشة */
+  gap: 2rem; /* مسافة بين العناصر */
+  padding: 2rem;
+  justify-items: center; /* محاذاة العناصر في الوسط */
+}
+
+/* تصميم كل عنصر (Feature) */
+.feature {
+  background: #fff; /* لون الخلفية */
+  border: 2px solid #d9e8d5; /* إطار خفيف بلون أخضر باهت */
+  border-radius: 10px; /* زوايا مستديرة */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  padding: 1.5rem; /* حشوة داخلية */
+  text-align: center; /* محاذاة النصوص إلى الوسط */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التفاعل */
+}
+
+.feature:hover {
+  transform: translateY(-10px); /* تحريك العنصر قليلاً للأعلى عند التمرير */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التمرير */
+}
+
+/* صورة داخل العنصر */
+.feature img {
+  max-width: 60px; /* الحد الأقصى لعرض الصورة */
+  margin-bottom: 1rem; /* مسافة أسفل الصورة */
+}
+
+/* عنوان كل عنصر */
+.feature h3 {
+  font-size: 1.5rem; /* حجم النص */
+  color: #333; /* لون النص */
+  margin-bottom: 0.5rem; /* مسافة أسفل العنوان */
+}
+
+/* النصوص الوصفية */
+.feature p {
+  font-size: 1rem; /* حجم النص */
+  color: #666; /* لون النص */
+  line-height: 1.6; /* ارتفاع الأسطر لتحسين القراءة */
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .feature-grid {
+      grid-template-columns: 1fr; /* عرض عنصر واحد لكل صف */
+  }
+}
+/* إعداد الحاوية الرئيسية */
+.reasons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* قسمان متساويان */
+  gap: 2rem; /* مسافة بين القسمين */
+  align-items: center; /* محاذاة العناصر عموديًا */
+  padding: 2rem;
+}
+
+/* القسم الأيسر - النصوص */
+.accordion-section {
+  background: #f9f9f9; /* لون خلفية خفيف */
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 20px rgba(174, 103, 103, 0.1); /* ظل خفيف */
+}
+
+.accordion-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* تصميم عناصر الـ Accordion */
+.accordion-item {
+  margin-bottom: 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.accordion-button:hover {
+  background: #d9e8d5; /* لون أخضر خفيف */
+}
+
+.accordion-content {
+  display: none; /* إخفاء المحتوى افتراضيًا */
+  padding: 1rem;
+  background: #f4f4f4;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* إظهار المحتوى عند التفاعل */
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* القسم الأيمن - الصورة */
+.image-section img {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .reasons-container {
+      grid-template-columns: 1fr; /* قسم واحد في كل صف */
+  }
+
+  .image-section {
+      margin-top: 1rem; /* مسافة فوق الصورة */
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Statistics Section */
+.stats {
+  display: flex;
+  justify-content: center;
+  background: #8bc34a;
+  color: white;
+  padding: 20px 0;
+}
+.stat-item {
+  margin: 0 20px;
+  text-align: center;
+}
+.stat-item h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+/* Testimonial Section Styling */
+.testimonial {
+  text-align: center;
+  padding: 40px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.testimonial h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.testimonial-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 20px;
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.client-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.client-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.client-info span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #8bc34a;
+}
+
+button:hover {
+  color: #6fa22c;
+}
+
+
+/* Subscription Section */
+.subscribe {
+  text-align: center;
+  padding: 40px;
+  background: #eef7e9;
+}
+.subscribe h3 {
+  margin-bottom: 10px;
+}
+.subscribe form {
+  display: inline-flex;
+  margin-top: 20px;
+}
+.subscribe input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+.subscribe button {
+  padding: 10px 20px;
+  border: none;
+  background: #8bc34a;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+.subscribe button:hover {
+  background: #6fa22c;
+}
+/* General Footer Styling */
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Logo Section */
+.footer-logo img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+/* Links Section */
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin: 5px 0;
+}
+
+.footer-links a,
+.footer-contact a {
+  text-decoration: none;
+  color: #6fa22c;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #8bc34a;
+}
+
+/* Social Media Section */
+.footer-social {
+  margin: 20px 0;
+}
+
+.footer-social .social-icon {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #8bc34a;
+  text-decoration: none;
+}
+
+.footer-social .social-icon:hover {
+  color: #6fa22c;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+
+
+
